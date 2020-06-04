@@ -24,6 +24,14 @@ describe("Word", () => {
                 expect(testWord.lowercase).toEqual({ word: "test" });
             });
         });
+        describe("palindrome", () => {
+            it("Should return true if word is a palindrome", () => {
+                const testWord = new Word("dad");
+                const test = new Word("day");
+                expect(testWord.isPalindrome).toBe(true);
+                expect(test.isPalindrome).toBe(false);
+            });
+        });
         describe("setWord", () => {
             it("Should set a word", () => {
                 const test = new Word("test");

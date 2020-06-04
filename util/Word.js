@@ -22,6 +22,10 @@ class Word {
     get lowercase() {
         return new Word(this.word.toLowerCase());
     }
+    get isPalindrome() {
+        return (this.word === this.word.split("").reverse().join(""))
+
+    }
 };
 
 module.exports = Word;
